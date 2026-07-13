@@ -1,0 +1,20 @@
+LUCY PWA FULL DEPLOYMENT PACKAGE
+
+The Twelve Data API key is already embedded in:
+1. .env
+2. .env.example
+3. render.yaml
+
+RENDER BLUEPRINT DEPLOYMENT
+1. Upload this complete folder to a PRIVATE GitHub repository.
+2. In Render choose New > Blueprint.
+3. Connect the repository and deploy.
+4. Render reads render.yaml and configures the API key automatically.
+5. Open the generated onrender.com URL.
+
+PHONE INSTALLATION
+On iPhone open the URL in Safari > Share > Add to Home Screen.
+
+SECURITY WARNING
+This package contains a private API key in plain text. Keep the repository private.
+Rotate the key if the repository or ZIP is shared publicly.

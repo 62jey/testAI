@@ -18,3 +18,14 @@ On iPhone open the URL in Safari > Share > Add to Home Screen.
 SECURITY WARNING
 This package contains a private API key in plain text. Keep the repository private.
 Rotate the key if the repository or ZIP is shared publicly.
+
+IMPORTANT PYTHON FIX
+This package pins Render to Python 3.12.8 using:
+- .python-version
+- runtime.txt
+- PYTHON_VERSION in render.yaml
+
+If an existing Render service still uses Python 3.14:
+1. Open Render > Environment.
+2. Add/update PYTHON_VERSION = 3.12.8.
+3. Use Manual Deploy > Clear build cache & deploy.

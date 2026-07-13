@@ -1,0 +1,17 @@
+RENDER PYDANTIC-CORE / PYTHON 3.14 FIX
+
+Cause:
+Render selected Python 3.14, but pydantic-core 2.27.2 (from Pydantic 2.10.6) uses a PyO3 release that supports up to Python 3.13.
+
+This project now forces Python 3.12.8 in three places:
+1. .python-version
+2. runtime.txt
+3. render.yaml -> PYTHON_VERSION
+
+For an existing Render service:
+1. Push/upload this repaired project to GitHub.
+2. In Render, open Environment and confirm PYTHON_VERSION is 3.12.8.
+3. Click Manual Deploy -> Clear build cache & deploy.
+4. Do not use Python 3.14 for this pinned dependency set.
+
+The Poetry installation message is normal for Render's Python runtime and is not the cause of the failure.

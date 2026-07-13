@@ -3,10 +3,12 @@ services:
     name: lucy-market-analysis
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
       - key: TWELVE_DATA_API_KEY
         value: b18b7eb5815a4841bcb45ba80f3069ab
       - key: DERIV_APP_ID
